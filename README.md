@@ -1,24 +1,24 @@
-# Credit — dashboard Shiny
+# Credit — Shiny dashboard
 
-Dashboard para exploração estatística do conjunto de dados `Credit` do pacote [ISLR](https://cran.r-project.org/package=ISLR) (400 clientes, saldo do cartão de crédito e características sociodemográficas).
+Shiny dashboard for exploratory analysis and hypothesis testing on the `Credit` dataset from the [ISLR](https://cran.r-project.org/package=ISLR) package (400 credit card holders: balance, credit limit, income and socio-demographic attributes).
 
-Trabalho desenvolvido no âmbito do Mestrado em Estatística para a Ciência de Dados (Universidade do Minho).
+Built as coursework for the MSc in Statistics for Data Science at the University of Minho. The interface is in Portuguese.
 
-## O que faz
+## Features
 
-- **Visão geral**: número de clientes, dívida média e mediana, rácio dívida/limite e tabela dos dados.
-- **Análise**: histograma com curva de densidade, boxplot por fator e gráfico de dispersão com reta de regressão (opcionalmente por grupo).
-- **Testes de hipótese**: teste t (Welch ou variâncias iguais), ANOVA a um fator e teste do qui-quadrado, com tabela de contingência.
+- **Overview**: number of clients, mean and median balance, balance-to-limit ratio and a searchable data table.
+- **Analysis**: histogram with density curve, boxplot by factor, and scatter plot with optional regression line by group.
+- **Hypothesis tests**: two-sample t-test (Welch or pooled variance), one-way ANOVA and chi-square test of independence, with the contingency table.
 
-Todos os separadores respeitam os filtros da barra lateral (género, estudante, estado civil, etnia, idade, rendimento e limite de crédito). Quando os filtros deixam um teste sem condições de ser executado, a app explica porquê em vez de falhar.
+Every tab follows the global filters in the sidebar (gender, student status, marital status, ethnicity, age, income and credit limit). When the filters leave a test without enough data, the app explains why instead of failing.
 
-## Executar
+## Run
 
 ```r
 install.packages(c("shiny", "shinydashboard", "ISLR", "dplyr", "ggplot2", "DT", "broom"))
 shiny::runApp()
 ```
 
-## Licença
+## License
 
 MIT
